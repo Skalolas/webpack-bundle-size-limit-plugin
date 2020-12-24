@@ -78,7 +78,7 @@ export class WebpackBundleSizeLimitPlugin {
                 ) {
                   compilation.errors.push(
                     error([
-                      'Bundle size exceeded.',
+                      'Bundle size exceeded. Please check dependencies',
                       `Bundle name:  ${fileWithAssetConfig.asset}`,
                       `Bundle size:  ${this.fromByteToX(
                         fileWithAssetConfig.sizeInBytes,
