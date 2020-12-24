@@ -40,7 +40,7 @@ export class WebpackBundleSizeLimitPlugin {
   }
 
   private getSizeInBytes(asset: string, { outputPath }: Compiler): number {
-    return statSync(`${outputPath}/${asset}`).size;
+    return statSync(`${outputPath}/${asset.split('?')[0]}`).size;
   }
 
   apply(compiler: Compiler): void {
